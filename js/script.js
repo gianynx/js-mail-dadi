@@ -15,16 +15,8 @@ const emailInput = document.querySelector('input[name="email"]');
 // console.log(emailInpunt);
 const btnSend = document.getElementById('btnSend');
 // console.log(btnSend);
-
-// const address = [
-//     "gianmarcoincocciati@gmail.com",
-//     "mariorossi@gmail.com",
-//     "pippolucarelli@gmail.com",
-//     "lucarelliloco@gmail.com",
-//     "antonioincocciati@gmail.com",
-//     "alessandrodelpiero@gmail.com",
-//     "booleancareers@gmail.com"
-// ];
+const btnCanc = document.getElementById('btnCanc');
+// console.log(btnCanc);
 
 btnSend.addEventListener('click', checklist);
 function checklist(event) {
@@ -39,12 +31,25 @@ function checklist(event) {
         "booleancareers@gmail.com"
     ];
     let addresses = address;
+    let message_1 = 'Sign in';
+    const signIn = document.getElementById('signIn');
+    signIn.innerHTML = `${message_1}`;
+    let message_2 = 'Not available';
+    const notAvailable = document.getElementById('notAvailable');
+    notAvailable.innerHTML = `${message_2}`;
     for (let a = 0; a < addresses.length; a++) {
-        addresses[a] = emailInput.value;
         if (addresses[a] === emailInput.value) {
-            console.log('ciao');
+            signIn.classList.remove("d-none");
         } else {
-            console.log('null');
+            signIn.classList.add("d-none");
+            notAvailable.classList.remove("d-none");
         }
     }
 }
+
+// btnCanc.addEventListener('click', checklist);
+// function checklist(event) {
+//     event.preventDefault();
+//     emailInput.value = '';
+//     sign.classList.toggle("d-none");
+// }
