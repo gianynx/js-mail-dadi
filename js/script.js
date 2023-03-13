@@ -16,7 +16,7 @@ const emailInput = document.querySelector('input[name="email"]');
 const btnSend = document.getElementById('btnSend');
 // console.log(btnSend);
 
-// const access = [
+// const address = [
 //     "gianmarcoincocciati@gmail.com",
 //     "mariorossi@gmail.com",
 //     "pippolucarelli@gmail.com",
@@ -39,10 +39,12 @@ function checklist(event) {
         "booleancareers@gmail.com"
     ];
     let addresses = address;
-    addresses = emailInput;
-    if (addresses === emailInput) {
-        console.log('ciao');
-    } else {
-        console.log('null');
+    for (let a = 0; a < addresses.length; a++) {
+        addresses[a] = emailInput.value;
+        if (addresses[a] === emailInput.value) {
+            console.log('ciao');
+        } else {
+            console.log('null');
+        }
     }
 }
