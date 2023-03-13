@@ -7,16 +7,29 @@
     <title>Game</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="email">
-        <form>
-            <input type="email" id="email" name="email" placeholder="Enter your email">
-            <button id="btnSend">Send</button>
-            <button id="btnCanc">Cancel</button>
+    <div class="text-center" id="email">
+        <h1 class="fw-bold">Enter your email!</h1>
+        <form class="pt-5">
+            <input class="rounded-3 mx-3" type="email" id="email" name="email" placeholder="email" maxlength="50" minlength="10" size="30" list="defaultEmails" required>
+            <datalist id="defaultEmails">
+                <option value="gianmarcoincocciati@gmail.com"></option>
+                <option value="mariorossi@gmail.com"></option>
+                <option value="pippolucarelli@gmail.com"></option>
+                <option value="lucarelliloco@gmail.com"></option>
+                <option value="antonioincocciati@gmail.com"></option>
+                <option value="alessandrodelpiero@gmail.com"></option>
+                <option value="booleancareers@gmail.com"></option>
+              </datalist>
+            <button id="btnSend" class="rounded-3">send</button>
+            <button id="btnCanc" class="rounded-3">cancel</button>
         </form>
-        <div id="signIn" class="d-none"></div>
-        <div id="notAvailable" class="d-none"></div>
+        <div id="signIn" class="d-none pt-5 fs-4"></div>
+        <div id="notAvailable" class="d-none pt-5 fs-4"></div>
     </div>
 
 

@@ -32,10 +32,10 @@ function checklist(event) {
     ];
     let addresses = address;
     let invited = false;
-    let message_1 = 'Sign in';
+    let message_1 = 'Valid email address!';
     const signIn = document.getElementById('signIn');
     signIn.innerHTML = `${message_1}`;
-    let message_2 = 'Not available';
+    let message_2 = 'Not available!';
     const notAvailable = document.getElementById('notAvailable');
     notAvailable.innerHTML = `${message_2}`;
     for (let a = 0; a < addresses.length; a++) {
@@ -45,6 +45,7 @@ function checklist(event) {
     }
     if (invited === true) {
         signIn.classList.remove("d-none");
+        notAvailable.classList.add("d-none");
     } else {
         signIn.classList.add("d-none");
         notAvailable.classList.remove("d-none");

@@ -1,0 +1,23 @@
+body {
+    background-image: linear-gradient(to right, #131826, #575916, #F2E2C4, #575916, #131826);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 {
+    color: #131826;
+    margin-top: 12rem;
+}
+
+input {
+    border-style: none;
+}
+
+button {
+    border-style: none;
+}
+
+button:hover {
+    background-color: #131826;
+    color: white;
+    opacity: 0.9;
+}
