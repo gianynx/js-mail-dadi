@@ -15,8 +15,8 @@ const emailInput = document.querySelector('input[name="email"]');
 // console.log(emailInpunt);
 const btnSend = document.getElementById('btnSend');
 // console.log(btnSend);
-const btnCanc = document.getElementById('btnCanc');
-// console.log(btnCanc);
+// const btnCanc = document.getElementById('btnCanc');
+// // console.log(btnCanc);
 
 btnSend.addEventListener('click', checklist);
 function checklist(event) {
@@ -31,6 +31,7 @@ function checklist(event) {
         "booleancareers@gmail.com"
     ];
     let addresses = address;
+    let invited = 'false';
     let message_1 = 'Sign in';
     const signIn = document.getElementById('signIn');
     signIn.innerHTML = `${message_1}`;
@@ -39,6 +40,7 @@ function checklist(event) {
     notAvailable.innerHTML = `${message_2}`;
     for (let a = 0; a < addresses.length; a++) {
         if (addresses[a] === emailInput.value) {
+            invited = 'true';
             signIn.classList.remove("d-none");
         } else {
             signIn.classList.add("d-none");
